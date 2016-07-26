@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DrawOnPic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PKf-S5-EMP">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHa-bL-ZyY" customClass="DrawView" customModule="DrawOnPic" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r25-v2-GqM">
+                                        <rect key="frame" x="275" y="275" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Mx4-mb-mHx"/>
+                                            <constraint firstAttribute="width" constant="50" id="xPs-c5-l7w"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asI-wj-hKM">
+                                <rect key="frame" x="20" y="35" width="54" height="30"/>
+                                <color key="backgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="0.49568731936416183" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="1dx-Nv-Bqs"/>
+                                    <constraint firstAttribute="height" constant="30" id="5kc-SP-C6j"/>
+                                </constraints>
+                                <state key="normal" title="Undo">
+                                    <color key="titleColor" red="0.17534515261650085" green="0.202461838722229" blue="0.27715492248535156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="undoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Fp-bb-WEc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9g-Fb-RIJ">
+                                <rect key="frame" x="20" y="550" width="54" height="30"/>
+                                <color key="backgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hKp-0q-Qdy"/>
+                                    <constraint firstAttribute="width" constant="54" id="ppY-aP-XLg"/>
+                                </constraints>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" red="0.17534515261650085" green="0.202461838722229" blue="0.27715492248535156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xf1-yW-AmD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RxD-Ia-5q2">
+                                <rect key="frame" x="535" y="550" width="50" height="30"/>
+                                <color key="backgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XsA-jN-txf"/>
+                                    <constraint firstAttribute="width" constant="50" id="iRf-mI-gWP"/>
+                                </constraints>
+                                <state key="normal" title="Draw">
+                                    <color key="titleColor" red="0.17534515261650085" green="0.202461838722229" blue="0.27715492248535156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="drawAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DIe-fw-UkW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tHa-bL-ZyY" secondAttribute="trailing" id="BCJ-dX-Qqp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RxD-Ia-5q2" secondAttribute="bottom" constant="20" id="Fad-YK-IQl"/>
+                            <constraint firstItem="tHa-bL-ZyY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="INv-1j-bxn"/>
+                            <constraint firstItem="tHa-bL-ZyY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="PsA-wH-IJ8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="X9g-Fb-RIJ" secondAttribute="bottom" constant="20" id="R9O-G1-heh"/>
+                            <constraint firstItem="PKf-S5-EMP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SZZ-g4-78z"/>
+                            <constraint firstItem="r25-v2-GqM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T2l-rN-gSf"/>
+                            <constraint firstItem="asI-wj-hKM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Ur2-wy-5ie"/>
+                            <constraint firstItem="PKf-S5-EMP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="WxF-vn-7fc"/>
+                            <constraint firstItem="asI-wj-hKM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="Yvp-W9-5Zn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PKf-S5-EMP" secondAttribute="bottom" id="fNY-Oa-IiS"/>
+                            <constraint firstItem="r25-v2-GqM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fw2-3w-ZyY"/>
+                            <constraint firstAttribute="trailing" secondItem="PKf-S5-EMP" secondAttribute="trailing" id="g1L-7S-abi"/>
+                            <constraint firstAttribute="trailing" secondItem="RxD-Ia-5q2" secondAttribute="trailing" constant="15" id="svE-bk-Yh2"/>
+                            <constraint firstItem="X9g-Fb-RIJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="u1j-f1-5fR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tHa-bL-ZyY" secondAttribute="bottom" id="v9r-0L-pR8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bubbleView" destination="r25-v2-GqM" id="w2X-mA-hWD"/>
+                        <outlet property="clearBtn" destination="X9g-Fb-RIJ" id="PKT-Ip-kjM"/>
+                        <outlet property="drawBtn" destination="RxD-Ia-5q2" id="R8X-zh-mXW"/>
+                        <outlet property="drawView" destination="tHa-bL-ZyY" id="OVE-6h-0mJ"/>
+                        <outlet property="imageView" destination="PKf-S5-EMP" id="yRA-vn-Lo8"/>
+                        <outlet property="undoBtn" destination="asI-wj-hKM" id="20R-4I-GEe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="315" y="360"/>
+        </scene>
+    </scenes>
+</document>
