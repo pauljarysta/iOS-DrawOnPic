@@ -229,7 +229,7 @@ class ViewController: UIViewController, DrawViewDelegate {
 			penSize = minPenSize
 		}
 		else if penSize > maxPenSize {
-			penSize = maxPenSize
+			penSize = maxPenSize - 4
 		}
 		
 		circleLayerInner.removeFromSuperlayer()
